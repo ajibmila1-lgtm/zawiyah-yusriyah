@@ -1,0 +1,325 @@
+body { 
+    body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan body minimal setinggi layar */
+    margin: 0;
+}
+
+/* Biarkan konten utama mendorong footer ke bawah */
+.main-content {
+    flex: 1; 
+}
+
+/* Header Hijau */
+.top-bar { background-color: #f8faf8; padding: 5px 2%; color: green; border-bottom: 3px solid green; }
+.header-container { display: flex; justify-content: space-between; align-items: center; }
+.nav-menu { display: flex; gap: 20px; }
+.nav-menu a { color: green; text-decoration: green; font-weight: 800; }
+
+/* Gaya untuk kotak pencarian */
+.search-box input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    /* Outline hijau */
+    border: 2px solid green; 
+    /* Background putih bersih */
+    background-color: #ffffff;
+    color: #2d5a27;
+    outline: none;
+    width: 150px;
+    transition: 0.3s;
+}
+
+/* Efek saat diklik */
+.search-box input:focus {
+    width: 180px; /* Melebar saat diklik */
+}
+
+/* Warna teks di dalam kotak */
+.search-box input::placeholder {
+    color: #2d5a27;
+    opacity: 0.7;
+}
+
+/* Memastikan posisi sejajar dengan menu */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Agar tidak tumpah jika layar sempit */
+}
+
+.logo-img { width: 80px; }
+.kaligrafi-img {
+    height: 60px;
+    /* Menghapus filter putih sebelumnya */
+    filter: none; 
+    /* Mengubah warna hitam gambar menjadi hijau */
+    filter: sepia(100%) saturate(500%) hue-rotate(70deg) brightness(30%);
+}
+
+.logo-box {
+    display: flex;
+    align-items: center; /* Ini membuat teks dan logo sejajar di tengah secara vertikal */
+    gap: 15px;
+    margin-left: 0; /* Memastikan tidak ada margin kiri tambahan */
+    padding-bottom: 5px; /* Tambahkan sedikit padding-bottom jika masih kurang naik */
+}
+
+/* Jika Anda ingin tulisan "Zawiyah Yusriyah" lebih naik lagi, gunakan margin-bottom negatif */
+/* Style untuk tulisan "Selamat Datang di" */
+.welcome-text {
+    font-size: 12px;       /* Ukuran lebih kecil */
+    color: green;        /* Warna abu-abu muda agar tidak terlalu mencolok */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.nama-web {
+    font-weight: bold;
+    font-size: 36px;
+    color: green;
+    margin-top: 5px; /* Sesuaikan angka ini (bisa negatif seperti -5px jika ingin naik) */
+    display: flex;
+    align-items: center;
+}
+
+/* Mengatur kotak pembungkus teks agar bertumpuk */
+.brand-text {
+    display: flex;
+    flex-direction: column; /* Membuat teks bertumpuk ke bawah */
+    line-height: 1.2;       /* Mengatur jarak antar baris */
+}
+
+/* Sesuaikan bagian ini di file style.css Anda */
+header {
+    /* Ganti warna hijau (#2d5a27) dengan warna pilihan Anda */
+    border-bottom: 3px solid #FF0000; /* Contoh: #FF0000 adalah warna Merah */
+}
+
+.profile-section {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #ffffff;
+}
+
+/* Sesuaikan margin-top untuk mendekatkan teks ke atas */
+.mursyid-title { 
+    font-size: 24px; 
+    color: green; /* Sesuaikan warna jika perlu */
+    margin-top: 5px;  /* Kecilkan angka ini agar lebih mepet ke atas */
+    margin-bottom: 10px; 
+}
+.mursyid-subtitle { font-size: 18px; color: green; margin-top: 10px; }
+
+.muqoddam-title { 
+    font-size: 24px; 
+    color: green; /* Sesuaikan warna jika perlu */
+    margin-top: 5px;  /* Kecilkan angka ini agar lebih mepet ke atas */
+    margin-bottom: 10px; 
+}
+.muqoddam-subtitle { font-size: 18px; color: green; margin-top: 10px; }
+
+/* --- CSS untuk Foto Mursyid --- */
+.profile-photo img {
+    /* Tentukan ukuran tetap di sini */
+    width: 190px;  
+    height: 250px; 
+    
+    object-fit: cover; /* Agar foto tidak gepeng */
+    border-radius: 20%; /* kotak sudut melingkar */
+    border: 3px solid green;
+    display: block;
+    margin: 10px auto; /* Agar di tengah */
+}
+
+/* --- CSS untuk Foto Muqoddam --- */
+.muqoddam-img {
+    width: 190px !important;       
+    height: 250px !important;      
+    
+    object-fit: cover !important;  
+    border-radius: 20px !important;
+    border: 3px solid green !important;
+    display: block !important;
+    margin: 10px auto !important;
+}
+
+.profile-wrapper {
+    display: flex;
+    justify-content: center; /* Menjaga agar kelompok berada di tengah */
+    align-items: flex-start;  /* Menjajarkan bagian atas */
+    gap: 50px;               /* Jarak antara sisi kiri dan kanan */
+    padding: 40px;
+
+    /* Menggunakan ornamen hanya di bagian ini */
+    background-image: url('../assets/ornamen-bg.png'); 
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover; /* Mengatur ornamen agar muat di kotak */
+    background-color: rgba(255, 255, 255, 0.8); /* Warna putih semi-transparan */
+
+    /* Memberi sedikit efek bayangan pada kotak wrapper agar terlihat timbul */
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.mursyid-side, .muqoddam-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+
+/* Ukuran khusus untuk gambar muqoddam agar proporsional */
+.muqoddam-img {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Merapatkan jarak tombol dengan elemen di atasnya */
+.profile-buttons {
+    margin-top: -30px; /* Nilai negatif untuk menarik tombol ke atas */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Mengubah tampilan tombol menjadi hijau dengan tulisan putih */
+.btn-profile {
+    background-color: green; /* Warna hijau */
+    color: #ffffff !important; /* Tulisan putih */
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 0 5px;
+    border: 1px solid green;
+    transition: 0.3s;
+}
+
+/* Efek saat tombol diarahkan kursor (hover) */
+.btn-profile:hover {
+    background-color: #1bfc02; /* Hijau lebih terang saat hover */
+    color: #2d5a27 !important;
+    border-color: #1bfc02;
+}
+
+/* Slider */
+.slider-section { 
+    background-color: #2d5a27; padding: 0px 0; }
+
+    /* Mengurangi jarak atas secara drastis */
+    margin-top: 0px; 
+    
+    /* Atau kurangi padding-nya jika sebelumnya terlalu tebal */
+    padding-top: -50px; 
+}
+
+/* Ganti .slider-container dengan nama class yang ada di HTML Anda */
+/* Mengatur container pembungkus slider */
+.slider-container {
+    width: 100%;
+    display: flex;             /* Mengaktifkan sistem layout flexbox */
+    justify-content: center;   /* Memusatkan secara horisontal (kiri-kanan) */
+    align-items: center;       /* Memusatkan secara vertikal (atas-bawah) */
+    overflow: hidden;          /* Mencegah gambar keluar dari frame */
+}
+
+/* Mengatur gambar di dalam slider */
+.slider-container img {
+    display: block;
+    max-width: 100%;           /* Agar gambar responsif */
+    height: auto;
+    object-fit: cover;         /* Menjaga proporsi gambar */
+}
+
+    /* --- Pengaturan Slider & Foto --- */
+.swiper {
+    width: 100%;
+    height: 500px; /* Tinggi kotak slider */
+    background-color: #2d5a27; /* Warna latar hijau untuk bagian kosong */
+}
+
+/* Pastikan slide memusatkan kontennya */
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Memusatkan horisontal */
+    align-items: center;     /* Memusatkan vertikal */
+    height: 500px; /* Atur tinggi tetap agar semua slide seragam */
+    overflow: hidden;
+}
+
+/* Memastikan gambar di dalam slide mengikuti aturan tengah */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Foto akan mengisi kotak tanpa gepeng */
+    object-position: contain; /* Fokus ke tengah foto */
+    border-radius: 10px; /* Opsional: supaya ujung foto melengkung */
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    .nav-menu { flex-direction: column; text-align: center; gap: 10px; }
+    .swiper { height: 250px; }
+}
+
+/* Styling Footer Copyright */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; /* Mengatur spasi antar elemen */
+    align-items: center;
+    padding: 5px 50px;
+    background-color: green;
+    color: #ffffff;
+}
+
+/* Memastikan setiap bagian memiliki ruang yang seimbang */
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start; /* Logo tetap di kiri */
+}
+
+.footer-center {
+    text-align: center; /* Copyright di tengah */
+}
+
+.footer-right {
+    text-align: right; /* Alamat di kanan */
+}
+
+/* Styling untuk container kiri */
+.footer-left {
+    display: flex;
+    align-items: center;
+    /* Ubah gap agar jarak antar ikon pas */
+    gap: 20px; 
+    justify-content: flex-start;
+}
+
+/* Styling untuk setiap link ikon */
+.social-icon {
+    font-size: 24px;      /* Sedikit diperbesar agar ikon lebih jelas */
+    color: #ffffff;       /* Default warna putih (atau ganti dengan warna netral jika ingin) */
+    transition: transform 0.3s ease; /* Efek membesar saat disentuh */
+}
+
+/* Mengatur warna asli untuk masing-masing ikon saat di-hover */
+.social-icon:hover {
+    transform: scale(1.2); /* Ikon sedikit membesar */
+}
+
+/* Warna asli per media sosial */
+.fa-youtube { color: #FF0000; }
+.fa-instagram { color: #E4405F; }
+.fa-facebook-f { color: #1877F2; }
+.fa-tiktok { color: #000000; } /* Untuk TikTok, hitam adalah warna identitasnya */
