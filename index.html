@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zawiyah Yusriyah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="top-bar">
+        <div class="header-container">
+            <div class="logo-box">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                <div class="brand-text">
+                    <span class="welcome-text">Selamat Datang di</span>
+                    <span class="nama-web">Zawiyah Yusriyah</span>
+                </div>
+            </div>
+
+            <!-- Contoh di bagian navigasi -->
+            <nav>
+                <a href="index.html" class="nav-button active">Beranda</a>
+                <a href="profil.html" class="nav-button">Profil</a>
+                <a href="kegiatan.html" class="nav-button">Kegiatan</a>
+                <a href="kajian.html" class="nav-button">Kajian</a>
+                <a href="buletin.html" class="nav-button">Buletin</a>
+                <a href="kontak.html" class="nav-button">Kontak</a>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="Cari...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Bagian Profil Mursyid -->
+<section class="profile-section">
+
+    <div class="profile-wrapper">
+        
+        <!-- Bagian Kiri: Mursyid -->
+        <div class="mursyid-side">
+            <h2 class="mursyid-title">Mursyid Thoriqoh Syadziliyah Yusriyah</h2>
+            <div class="profile-photo"><img src="assets/Mursyid.jpg" alt="Mursyid"></div>
+            <h3 class="mursyid-subtitle">Maulana Syeikh Dr. Yusri Jabr Al-Hasani Al-Huseini</h3>
+        </div>
+
+        <!-- Bagian Kanan: Muqoddam -->
+        <div class="muqoddam-side">
+            <h3 class="muqoddam-title">Muqoddam Thoriqoh Syadziliyah Yusriyah</h2>
+            <img src="assets/muqoddam.jpg" alt="muqoddam" class="muqoddam-img">
+            <h3 class="muqoddam-subtitle">Dr. KH. Zawawi Abdul Wahid Al-Azhari</h3>
+        </div>
+        
+    </div>
+    
+    <div class="profile-buttons">
+        <a href="#" class="btn-profile">Biografi</a>
+        <a href="#" class="btn-profile">Kajian</a>
+        <a href="#" class="btn-profile">Kegiatan Dakwah</a>
+    </div>
+</section>
+
+    <!-- Slider -->
+    <section class="slider-section">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- Foto muncul otomatis via script di bawah -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper JS & Script Otomatis -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Memanggil 23 foto secara otomatis
+        const wrapper = document.getElementById('swiper-wrapper');
+        for (let i = 1; i <= 24; i++) {
+            wrapper.innerHTML += `
+                <div class="swiper-slide">
+                    <img src="assets/${i}.jpg" alt="Foto ${i}">
+                </div>`;
+        }
+
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true // <-- Kunci: Berhenti saat kursor menempel
+    },
+    
+    /* --- TAMBAHKAN KODE DI BAWAH INI --- */
+    spaceBetween: 5, /* Jarak antar foto sebesar 20px */
+    
+    // Pengaturan jumlah foto berdasarkan ukuran layar
+    breakpoints: {
+        // Layar HP (Lebar minimal 0px) -> Tampil 1 foto
+        0: {
+            slidesPerView: 1,
+        },
+        // Layar Tablet/Laptop Kecil (Lebar minimal 768px) -> Tampil 2 foto
+        768: {
+            slidesPerView: 2,
+        },
+        // Layar Laptop Besar/PC (Lebar minimal 1024px) -> Tampil 3 foto
+        1024: {
+            slidesPerView: 3,
+        }
+    }
+});
+
+    </script>
+
+<footer class="footer-bottom">
+    <!-- Pojok Kiri: Kumpulan Ikon Medsos -->
+    <div class="footer-left">
+        <!-- Ganti Link '#' dengan link profil media sosial Anda -->
+        <a href="https://youtube.com/@zawiyahyusriyah" class="social-icon" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://instagram.com/zawiyahyusriyah" class="social-icon" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/zawiyahyusriyah" class="social-icon" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://tiktok.com/@zawiyahyusriyah" class="social-icon" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+
+    <!-- Tengah: Copyright (Tetap) -->
+    <div class="footer-center">
+        <p>&copy; 2026 Zawiyah Yusriyah.</p>
+    </div>
+
+    <!-- Pojok Kanan: Alamat (Tetap) -->
+    <div class="footer-right">
+        <p>Jl. Gangin Timur IV RT 3/RW 4, Gangin, Bangetayu Wetan, Genuk, Semarang, Jawa Tengah 50115.</p>
+    </div>
+</footer>
+
+</body>
+</html>
